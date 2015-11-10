@@ -15,7 +15,7 @@ import utils
 # this scrambles but can be easily decrypted if method is known
 
 def main():
-    im, im_arr = load_image("Images/Daisy_raw.jpg")
+    im, im_arr = load_image("Images/Daisy_raw.JPG")
     #im, im_arr = load_image("Images/encrypt.png")
 
     x_size, y_size = im.size
