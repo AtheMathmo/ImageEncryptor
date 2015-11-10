@@ -13,3 +13,6 @@ For example. We can take the following image of a daisy:
 And we can encrypt it to get:
 
 ![Encrypted_daisy](Images/encrypt.png)
+
+
+This is currently a very minimalistic shell of an idea. I wrote the code during a 9 hour flight to San Francisco. Hopefully very soon I can add a slightly nicer structure and some more features!
