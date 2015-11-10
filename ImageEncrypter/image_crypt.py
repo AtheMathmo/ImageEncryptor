@@ -15,16 +15,16 @@ import utils
 # this scrambles but can be easily decrypted if method is known
 
 def main():
-    im, im_arr = load_image("Images/Daisy_raw.jpg")
-    #im, im_arr = load_image("Images/encrypt.png")
+    im, im_arr = load_image("../Images/Daisy_raw.jpg")
+    #im, im_arr = load_image("../Images/encrypt.png")
 
     x_size, y_size = im.size
     basic_encrypt_scramble(im_arr, x_size, y_size)
     two_key_encryption(im_arr, x_size, y_size, 123, 4574574)
-    save_image("Images/encrypt.png", im)
+    save_image("../Images/encrypt.png", im)
     two_key_decryption(im_arr, x_size, y_size, 123, 4574574)
     basic_decrypt_unscramble(im_arr, x_size, y_size)
-    save_image("Images/decrypt.png", im)
+    save_image("../Images/decrypt.png", im)
     pass
 
 def load_image(file_path):
