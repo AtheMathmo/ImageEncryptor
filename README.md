@@ -16,3 +16,13 @@ And we can encrypt it to get:
 
 
 This is currently a very minimalistic shell of an idea. I wrote the code during a 9 hour flight to San Francisco. Hopefully very soon I can add a slightly nicer structure and some more features!
+
+## Usage
+
+The module can be installed by running:
+
+```
+python ImageEncrypter key1 key2 [-e <rawfile>] [-d <encryptedfile>]
+```
+
+The keys should be large integers. The images must be mutated in a lossless format. So the encrypted file will be saved as a .png and any decrypted files should be in this format.
