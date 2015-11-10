@@ -27,6 +27,22 @@ def main():
     save_image("../Images/decrypt.png", im)
     pass
 
+def encrypt_image(file_path, key1, key2, outpath = "Images/encrypt.png"):
+    im, im_arr = load_image(file_path)
+    x_size, y_size = im.size
+
+    basic_encrypt_scramble(im_arr, x_size, y_size)
+    two_key_encryption(im_arr, x_size, y_size, key1, key2)
+    save_image(outpath, im)
+
+def decrypt_image(file_path, key1, key2, outpath = "Images/decrypt.png"):
+    im, im_arr = load_image(file_path)
+    x_size, y_size = im.size
+
+    two_key_decryption(im_arr, x_size, y_size, key1, key2)
+    basic_decrypt_unscramble(im_arr, x_size, y_size)
+    save_image(outpath, im)
+
 def load_image(file_path):
     im = Image.open(file_path, 'r')
     arr = im.load()

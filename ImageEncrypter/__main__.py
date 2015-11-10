@@ -1,5 +1,7 @@
 import sys, argparse
 
+import image_crypt
+
 parser = argparse.ArgumentParser(description='Encrypt and decrypt images.')
 
 
@@ -21,3 +23,14 @@ parser.add_argument('keys', type=int, nargs=2,
 args = parser.parse_args()
 
 # Now we should process the arguments and run the program.
+if args.encrypt is not None:
+	if args.output is None:
+		image_crypt.encrypt_image(args.encrypt, args.keys[0], args.keys[1])
+	else:
+		image_crypt.encrypt_image(args.encrypt, args.keys[0], args.keys[1], args.output)
+
+if args.decrypt is not None:
+	if args.output is None:
+		image_crypt.decrypt_image(args.decrypt, args.keys[0], args.keys[1])
+	else:
+		image_crypt.decrypt_image(args.decrypt, args.keys[0], args.keys[1], args.output)
