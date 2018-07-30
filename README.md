@@ -17,6 +17,14 @@ And we can encrypt it to get:
 
 This is currently a very minimalistic shell of an idea. I wrote the code during a 9 hour flight to San Francisco. Hopefully very soon I can add a slightly nicer structure and some more features!
 
+## Requirements
+
+Install Pillow (PIL) python module by running
+
+```
+pip install Pillow
+```
+
 ## Usage
 
 The module can be installed by running:
