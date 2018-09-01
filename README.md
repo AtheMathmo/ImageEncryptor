@@ -30,7 +30,13 @@ pip install Pillow
 The module can be installed by running:
 
 ```
-python ImageEncrypter key1 key2 [-e <rawfile>] [-d <encryptedfile>]
+python setup.py install
+```
+
+And then used like this:
+
+```
+python ImageEncryptor key1 key2 [-e <rawfile>] [-d <encryptedfile>]
 ```
 
 The keys should be large integers. The images must be mutated in a lossless format. So the encrypted file will be saved as a .png and any decrypted files should be in this format.
